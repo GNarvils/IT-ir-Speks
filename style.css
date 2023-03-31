@@ -1,0 +1,531 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;700&display=swap');
+
+:root{
+    --main-color:#0a8913;
+    --bg: #fffbfb;
+    --black: #555;
+    --light-color:#777;
+    --border: .1rem solid rgba(0,0,0,.1);
+    --box-shadow:0 .5rem 1.5rem rgba(0,0,0,.1);
+    --radius: .5rem;
+    --darkgreen: #003100;
+    --text: #333;
+}
+
+*{
+    font-family: 'Source Sans Pro', sans-serif;
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    transition: all .3s ease-out;
+}
+
+*::selection{
+    background:var(--main-color);
+    color:#c2c2c2;
+}
+body{
+    min-height: 100vh;
+    display:flex;
+    flex-direction: column;
+}
+.container{
+    position: relative;
+    max-width: 1200px;
+    margin: auto;
+}
+
+html{
+    font-size: 62%;
+    scroll-behavior: smooth;
+    scroll-padding-top: 8rem;
+}
+
+html::-webkit-scrollbar{
+    width:0.8rem;
+}
+
+html::-webkit-scrollbar-track{
+    background: var(--light-color);
+}
+html::-webkit-scrollbar-thumb{
+background: var(--main-color);
+}
+section{
+    padding:2rem 9%;
+}
+
+header{
+    position: fixed;
+    top:0;
+    left:0;
+    right:0;
+    z-index: 1000;
+    background: rgb(183, 249, 180);
+    box-shadow: var(--box-shadow);
+    display: flex;
+    align-items:center;
+    justify-content: space-between;
+    padding: 2rem 9%;
+}
+
+header .logo{
+    font-size: 3.5rem;
+    color:var(--darkgreen);
+    font-weight:bold;
+    align-items: center;;
+}
+
+header img{
+    width: 35px;
+    height: auto;
+}
+header .navbar a{
+    font-size: 2.3rem;
+    padding-right: 1rem;
+    color: var(--text);
+}
+
+header .navbar a:hover{
+    color: var(--main-color);
+}
+
+header .autorizeties a{
+    font-size: 2.3rem;
+    padding-right: 1rem;
+    color: var(--text);
+}
+
+header .autorizeties a:hover{
+    color: var(--main-color);
+}
+
+header .autorizeties img{
+    width: 20px;
+}
+/*Sākumlapa*/
+#sakums{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-top: 0rem; /*padding-top: 10rem, kad popups būs pabeigts*/
+    background: var(--bg);
+    position: relative;
+}
+
+#sakums .content{
+    flex: 1 1 45rem;
+}
+
+#sakums .image{
+    flex: 1 0 45rem;
+}
+
+#sakums .image img{
+    width: 100%;
+}
+
+#sakums .content h2{
+    font-size: 6rem;
+    color: var(--darkgreen);
+    line-height: 1.9;
+}
+
+#sakums .content p{
+    font-size: 3rem;
+    color: var(--text);
+    line-height: 1.8;
+    padding: 1rem 0;
+}
+#vakances{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-top: 10rem;
+    background: var(--bg);
+    position: relative;
+}
+#vakances .content h2{
+    font-size: 4.5rem;
+    color: var(--darkgreen);
+    text-align: center;
+    line-height: 1.9;
+}
+
+#vakances .content p{
+    font-size: 3rem;
+    color: var(--text);
+    line-height: 1.8;
+    padding: 1rem 0;
+}
+
+#vakances .content{
+    text-align: center;
+    flex: 1 1 45rem;
+}
+#vakances .image{
+    flex: 1 0 45rem;
+}
+
+#vakances .image img{
+    width: 100%;
+}
+
+#vakances .poga{
+   cursor: pointer;
+   width: 200px;
+   height: 50px; 
+   font-size: 2.3rem;
+   box-shadow: var(--box-shadow);
+   text-align: center;
+   border-radius: 1rem;
+   background-color:rgb(216, 216, 216);
+}
+
+#vakances .poga:hover{
+  background-color:rgb(183, 249, 180);
+}
+
+#aktualitates{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-top: 10rem;
+    background: var(--bg);
+    position: relative;
+}
+
+#aktualitates .content{
+    text-align: center;
+    flex: 1 1 45rem;
+}
+
+#aktualitates .image{
+    flex: 1 0 45rem;
+}
+
+#aktualitates .image img{
+    width: 80%;
+    text-align: right;
+}
+
+#aktualitates .content h2{
+    font-size: 4.5rem;
+    color: var(--darkgreen);
+    text-align: center;
+    line-height: 1.9;
+}
+
+#aktualitates .content p{
+    font-size: 3rem;
+    color: var(--text);
+    line-height: 1.8;
+    padding: 1rem 0;
+}
+
+#aktualitates .poga{
+    cursor: pointer;
+    width: 250px;
+    height: 50px; 
+    font-size: 2.3rem;
+    box-shadow: var(--box-shadow);
+    text-align: center;
+    border-radius: 1rem;
+    background-color:rgb(216, 216, 216);
+ }
+ 
+ #aktualitates .poga:hover{
+   background-color:rgb(183, 249, 180);
+ }
+
+ footer{
+    position: relative;
+    margin-top:auto;
+    bottom: 0;
+    left:0;
+    right:0;
+    z-index: 1000;
+    background: rgb(183, 249, 180);
+    box-shadow: var(--box-shadow);
+    display: flex;
+    align-items:center;
+    justify-content: space-between;
+    padding: 1rem 9%;
+}
+
+#copy{
+    text-align:center;
+    font-size: 1.7rem;
+    padding: 5px;
+}
+
+#kontakti{
+    font-size: 2.3rem;
+    padding: 2px;
+    color: var(--darkgreen);
+}
+.kontakts{
+    font-size: 1.7rem;
+    list-style: none;
+}
+
+/*Vakances*/
+
+#vakancesH{
+    font-size: 5em;
+    line-height: 1.9rem;
+    padding: 17rem 1rem 7rem 1rem;
+    color: var(--darkgreen);
+    text-align: center;
+}
+table{
+    font-size: 2rem;
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: var(--box-shadow);
+}
+th, td{
+    text-align: center;
+    height: 50px;
+    min-height: 50px;
+    padding: 0.2rem 1.2rem;
+    border: 1px solid rgb(183, 249, 180);
+    border-style:solid;
+}
+th{
+
+    font-weight: bold;
+    color: var(--darkgreen);
+    font-size: 2.3rem;
+    text-align: center;
+}
+
+.vakancesT img{
+    max-width: 150px;
+    max-height: 150px;
+}
+
+.vakancesT button{
+    cursor: pointer;
+    width: 50px;
+    height: 50px; 
+    font-size: 2.3rem;
+    box-shadow: var(--box-shadow);
+    text-align: center;
+    border-radius: 1rem;
+    background-color:rgb(216, 216, 216);
+ }
+ 
+.vakancesT button:hover{
+   background-color:rgb(183, 249, 180);
+ }
+
+/*Pieteikšanas*/
+
+#pieteiktiesH{
+    font-size: 5em;
+    line-height: 1.9rem;
+    padding: 17rem 1rem 7rem 1rem;
+    color: var(--darkgreen);
+    text-align: center;
+}
+
+#pieteikties span{
+    background-color: rgb(183, 249, 180);
+}
+
+#pieteikties .box-container{
+    display: flex;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+}
+
+#pieteikties .box-container .box{
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+    height: 19rem;
+}
+
+#pieteikties .box-container .box input{
+    border: 1px solid rgb(183, 249, 180);
+    width: 40%;
+    border-radius: 1rem;
+    height: 4.3rem;
+    margin: 0.5rem 0rem;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+#pieteikties .box-container .box .vu{
+    border: 1px solid rgb(183, 249, 180);
+    width: 20%;
+    border-radius: 1rem;
+    height: 4.3rem;
+    margin: 0.5rem 0.5rem;
+    text-align: center;
+}
+
+#pieteikties .box-container .box .liel{
+    border: 1px solid rgb(183, 249, 180);
+    width: 40%;
+    border-radius: 1rem;
+    height: 4.3rem;
+    margin: 0.5rem 0.5rem;
+    text-align: center;
+}
+
+
+#pieteikties .box-container .box .submit:hover{
+    background-color:rgb(183, 249, 180);
+    cursor: pointer;
+     
+}
+
+#pieteikties .box-container .box textarea{
+    border: 1px solid rgb(183, 249, 180);
+    max-width: 40%;
+    min-width: 40%;
+    width: 40%;
+    min-height: 11rem;
+    max-height: 11rem;
+    border-radius: 1rem;
+    height: 4.3rem;
+    margin: 0.5rem 0rem;
+    font-size: 1.5rem;
+    padding: 0.5rem;
+}
+
+
+/*Aktualitātes*/
+#aktualitatesH{
+    font-size: 5em;
+    line-height: 1.9rem;
+    padding: 17rem 1rem 7rem 1rem;
+    color: var(--darkgreen);
+    text-align: center;
+}
+
+#aktualitate .box-container{
+    display:flex;
+    flex-direction: row;
+    gap: 5rem;
+    flex-flow: row;
+    align-items: center;
+    align-content: center;
+}
+
+#aktualitate .box-container .box{
+    text-align: center;
+    border:var(--border);
+    box-shadow: var(--box-shadow);
+    border-radius: var(--radius);
+    padding:3rem 2rem;
+    max-width: 500px;
+    min-width: 500px;
+    max-height: 500px;
+    min-height: 500px;
+}
+
+#aktualitate .box-container .box img{
+    height: 25rem;
+    width: 100%;
+}
+
+#aktualitate .box-container .box h2{
+    color:var(--black);
+    font-size: 2.5rem;
+    padding-top: 1.5rem;
+}
+
+#aktualitate .box-container .box p{
+    color:var(--light-color);
+    font-size: 1.5rem;
+    padding:1rem 0;
+    line-height: 1.5;
+}
+
+#aktualitate .box-container .box button{
+    cursor: pointer;
+    width: 150px;
+    height: 50px; 
+    font-size: 2.3rem;
+    box-shadow: var(--box-shadow);
+    text-align: center;
+    border-radius: 1rem;
+    background-color:rgb(216, 216, 216);
+ }
+
+ #aktualitate .box-container .box button:hover{
+    cursor: pointer;
+    width: 150px;
+    height: 50px; 
+    font-size: 2.3rem;
+    box-shadow: var(--box-shadow);
+    text-align: center;
+    border-radius: 1rem;
+    background-color:rgb(183, 249, 180);
+ }
+
+  .back img{
+    padding: 0.5rem;
+    width: 40px;
+    height: 40px;
+ }
+ .btnB{
+    border: 1px solid rgb(183, 249, 180);
+    border-radius: 1rem;
+    margin: 0.5rem 0.5rem;
+    text-align: center;
+ }
+
+ .btnB:hover{
+    background-color:rgb(183, 249, 180);
+    cursor: pointer;
+     
+}
+
+/*autorizeties*/
+#autorizeties{
+    background-color: var(--bg);
+    display: flex;
+    justify-content: center;
+}
+#autorizeties form{
+padding-top: 100px;
+z-index: 2;
+}
+
+#autorizeties form input{
+    border: 1px solid rgb(183, 249, 180);
+    width: 425px;
+    border-radius: 1rem;
+    height: 4.3rem;
+    margin: 0.5rem 0.5rem;
+    text-align: center;
+}
+
+#autorizeties form .Abtn:hover{
+    background-color:rgb(183, 249, 180);
+    cursor: pointer;
+}
+
+#autorizeties a{
+    text-decoration: none;
+    font-size: 1.5rem;
+    color:#003100;
+    text-align: center;
+}
+
+#autorizeties h2{
+    text-decoration: none;
+    font-size: 3rem;
+    padding: 0.5rem 0;
+    color:#003100;
+    text-align: center;
+}
