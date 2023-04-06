@@ -40,36 +40,30 @@
                 <th>Apraksts</th>
                 <th>Piesakies</th>
             </tr>
-            <tr>
-                <td><img src="images/Rimi.jpg"></td>
-                <td>SIA "Rimi"</td>
-                <td>IT speciālists</td>
-                <td>Liepāja</td>
-                <td>8 - 12 stundas</td>
-                <td>7.50 Eur/h</td>
-                <td>Ir vajadzīgs cilvēks, kurš var programmēt un apkopot mūsu veikalos elektronisko infopaneli.</td>
-                <td><a href="pieteikties.html"><button class><i class="fa fa-sign-in"></i></button></a></td>
-            </tr>
-            <tr>
-                <td><img src="images/maxima.png"></td>
-                <td>SIA "Maxima"</td>
-                <td>IT speciālists</td>
-                <td>Kuldīga</td>
-                <td>8 stundas</td>
-                <td>8.00 Eur/h</td>
-                <td>Ir vajadzīgs cilvēks, kurš var programmēt mūsu veikalos kases aparātus.</td>
-                <td><button class><i class="fa fa-sign-in"></i></button></td>
-            </tr>
-            <tr>
+            <?php
+                   require "connect_db.php";
+                   $vakancesVaicajums = "SELECT * FROM vakance";
+                   $atlasaVakanci = mysqli_query($savienojums, $vakancesVaicajums);
+                   while($ieraksts = mysqli_fetch_assoc($atlasaVakanci)){
+                    $bilde = $ieraksts['Logo'];
+                    echo "
+                     <tr>
+                     <td>   
+                     "?><img src="data:image/jpeg;base64,<?php echo base64_encode($bilde); ?>" /><?php "
+                    </td>
+                    <td>$ieraksts['Nosaukums']</td>
+                    <td>$ieraksts['Profesija']</td>
+                    <td>$ieraksts['Pilseta']</td>
+                    <td>$ieraksts['Stundas']</td>
+                    <td>$ieraksts['Samaksa']</td>
+                    <td>$ieraksts['Apraksts']</td>
+                    <td><button class><i class='fa fa-sign-in'></i></button></td>
+                </tr>
+                    
+             ";
+                   }
+                ?>
                 <td><img src="images/Microsoft.png"></td>
-                <td>AS "Microsoft"</td>
-                <td>Mākoņaglabātuves enģinieris</td>
-                <td>Rīga</td>
-                <td>8 stundas</td>
-                <td>9.00 Eur/h</td>
-                <td>Cilvēks, kurš var uzturēt mākoņaglabātuvi.</td>
-                <td><button class><i class="fa fa-sign-in"></i></button></td>
-            </tr>
             <tr>
                 <td><img src="images/Google.png"></td>
                 <td>SIA "Google LLC"</td>

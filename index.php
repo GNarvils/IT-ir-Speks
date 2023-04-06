@@ -26,7 +26,7 @@
         </div>
     </header>
     <section id="autorizeties">
-        <form>
+    <form action='#' method='post'>
         <h2>Autorizējies</h2>
         <input type="email" placeholder="E-pasts" name="E-pasts" title="E-pasts" required>
         <br>

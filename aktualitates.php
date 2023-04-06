@@ -16,9 +16,9 @@
             <a href="#" class="logo">IT ir Spēks</a>
         </div>
         <nav class="navbar">
-            <a href="index.html">Sākumlapa</a>
-            <a href="vakances.html">Vakances</a>
-            <a href="aktualitates.html">Aktualitātes</a>
+            <a href="index.php">Sākumlapa</a>
+            <a href="vakances.php">Vakances</a>
+            <a href="aktualitates.php">Aktualitātes</a>
         </nav>
         <div class="autorizeties">
             <a href="#">Autorizēties</a>
@@ -27,15 +27,25 @@
     </header>
     <section id="aktualitate">
         <h1 id="aktualitatesH">
-            <button class="btnB"><a href="index.html" class="back"><img src="images/Atpakaļ.png" alt=""></a></button>
+            <button class="btnB"><a href="index.php" class="back"><img src="images/Atpakaļ.png" alt=""></a></button>
             Apskati jaunākos IT notikumus.</h1>
         <div class="box-container">
-        <div class="box">
-            <img src="images/veikals.jpg">
-            <h2>Rimi bankrotē!</h2>
-            <p>Populārais veikals Rimi ir bankrotējis un tā rezultātā vairāki IT darbinieki ir bez darba</p>
-            <button>Lasi vairāk</button>
-        </div>
+        <?php
+                   require "connect_db.php";
+                   $aktualitatesVaicajums = "SELECT * FROM aktualitates";
+                   $atlasaAktualitati = mysqli_query($savienojums, $aktualitatesVaicajums);
+                   while($ieraksts = mysqli_fetch_assoc($atlasaAktualitati)){
+                    $bilde = $ieraksts['Bilde'];
+                    echo "
+                    <div class='box'>
+                    "?><img src="data:image/jpeg;base64,<?php echo base64_encode($bilde); ?>" /><?php "
+                            <h2>{$ieraksts['Virsraksts']}</h2>
+                            <p>{$ieraksts['Apraksts']}</p>
+                            <button>Lasi vairāk</button>
+                    
+                    </div>        ";
+                   }
+                ?>
         <div class="box">
             <img src="images/MicrosoftW12.jpg">
             <h2>Jauna operētājsistēma!</h2>
