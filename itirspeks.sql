@@ -62,7 +62,7 @@ CREATE TABLE `pieteikties` (
   `Pieteikties_ID` int(11) NOT NULL,
   `Vards` varchar(45) COLLATE utf8_latvian_ci NOT NULL,
   `Uzvards` varchar(45) COLLATE utf8_latvian_ci NOT NULL,
-  `E-pasts` varchar(45) COLLATE utf8_latvian_ci NOT NULL,
+  `Epasts` varchar(45) COLLATE utf8_latvian_ci NOT NULL,
   `Talrunis` varchar(13) COLLATE utf8_latvian_ci NOT NULL,
   `Izglitiba` varchar(255) COLLATE utf8_latvian_ci NOT NULL,
   `Darba_pieredze` varchar(255) COLLATE utf8_latvian_ci NOT NULL,

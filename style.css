@@ -34,7 +34,7 @@ body{
 }
 .container{
     position: relative;
-    max-width: 1200px;
+    max-width: 1600px;
     margin: auto;
 }
 
@@ -93,17 +93,17 @@ header .navbar a:hover{
     color: var(--main-color);
 }
 
-header .autorizeties a{
+header .auto a{
     font-size: 2.3rem;
     padding-right: 1rem;
     color: var(--text);
 }
 
-header .autorizeties a:hover{
+header .auto a:hover{
     color: var(--main-color);
 }
 
-header .autorizeties img{
+header .auto img{
     width: 20px;
 }
 /*Sākumlapa*/
@@ -111,7 +111,7 @@ header .autorizeties img{
     display: flex;
     align-items: center;
     flex-wrap: wrap;
-    padding-top: 0rem; /*padding-top: 10rem, kad popups būs pabeigts*/
+    padding-top: 10rem;
     background: var(--bg);
     position: relative;
 }
@@ -277,13 +277,15 @@ header .autorizeties img{
 #vakancesH{
     font-size: 5em;
     line-height: 1.9rem;
-    padding: 17rem 1rem 7rem 1rem;
+    padding: 12rem 1rem 7rem 1rem;
     color: var(--darkgreen);
     text-align: center;
 }
 table{
+    display:inline-block;
+    overflow: scroll;
     font-size: 2rem;
-    width: 75%;
+    width: 90%;
     margin-left: auto;
     margin-right: auto;
     box-shadow: var(--box-shadow);
@@ -291,10 +293,14 @@ table{
 th, td{
     text-align: center;
     height: 50px;
-    min-height: 50px;
     padding: 0.2rem 1.2rem;
     border: 1px solid rgb(183, 249, 180);
-    border-style:solid;
+    word-wrap:break-word;
+    border-style: solid;  
+}
+.apr{
+    max-width: 830px;
+    max-height: 40%;
 }
 th{
 
@@ -406,7 +412,7 @@ th{
 #aktualitatesH{
     font-size: 5em;
     line-height: 1.9rem;
-    padding: 17rem 1rem 7rem 1rem;
+    padding: 10rem 1rem 7rem 1rem;
     color: var(--darkgreen);
     text-align: center;
 }
@@ -415,7 +421,9 @@ th{
     display:flex;
     flex-direction: row;
     gap: 5rem;
-    flex-flow: row;
+    flex-wrap: wrap;
+    flex-flow: flex-start;
+    justify-content: center;
     align-items: center;
     align-content: center;
 }
@@ -491,17 +499,29 @@ th{
 }
 
 /*autorizeties*/
-#autorizeties{
-    background-color: var(--bg);
-    display: flex;
-    justify-content: center;
+.kluda{
+    font-size: 4rem;
+    text-align: center;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    color: #eee;
+    font-weight: bold;
+    background: #a14141;
 }
-#autorizeties form{
+.autorizeties{
+    display: none;
+    justify-content: center;
+    left: 50%;
+    align-items: center;
+    background-color: var(--bg);
+}
+
+.autorizeties form{
 padding-top: 100px;
 z-index: 2;
 }
 
-#autorizeties form input{
+.autorizeties form input{
     border: 1px solid rgb(183, 249, 180);
     width: 425px;
     border-radius: 1rem;
@@ -510,22 +530,42 @@ z-index: 2;
     text-align: center;
 }
 
-#autorizeties form .Abtn:hover{
+.autorizeties form .Abtn:hover{
     background-color:rgb(183, 249, 180);
     cursor: pointer;
 }
 
-#autorizeties a{
+.autorizeties a{
     text-decoration: none;
     font-size: 1.5rem;
     color:#003100;
     text-align: center;
 }
 
-#autorizeties h2{
+.autorizeties h2{
     text-decoration: none;
     font-size: 3rem;
     padding: 0.5rem 0;
     color:#003100;
     text-align: center;
+}
+
+.autorizeties .close{
+    border: 1px solid rgb(183, 249, 180);
+    width: 30px;
+    height:30px;
+    border-radius: 1rem;
+    margin: 0.5rem 0.5rem;
+    text-align: center;
+    right: 40%;
+}
+
+.autorizeties .close:hover{
+    background-color:rgb(183, 249, 180);
+    cursor: pointer;
+}
+
+.mazs{
+    max-width: 50px;
+    margin: 0 1rem;
 }
