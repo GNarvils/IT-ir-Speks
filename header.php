@@ -1,4 +1,7 @@
-<?php         session_start();?>
+<?php
+session_start();
+?>
+		
 <!DOCTYPE html>
 <html lang="lv">
 <head>
@@ -8,7 +11,7 @@
     <title>IT ir Spēks</title>
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="https://www.freeiconspng.com/thumbs/muscle-icon/muscular-gymnast-arm-muscles-show-8.png">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body class="containter">
     <header>
@@ -21,7 +24,9 @@
             <a href='vakances.php'>Vakances</a>
             <a href='aktualitates.php'>Aktualitātes</a>
             <?php if(isset($_SESSION["Epasts"])){
+                if(isset($_SESSION["Admin"])){
             echo "<a href='darbinieki.php'>Darbineiki</a>";
+                }
         }?>
         </nav>
         <div class="auto">

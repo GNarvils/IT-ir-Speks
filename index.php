@@ -1,6 +1,5 @@
 
 <?php
-$page = "sakums";
 require("header.php");
 require("login.php");
 ?>

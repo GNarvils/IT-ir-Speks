@@ -1,4 +1,4 @@
-<?php if(isset($_POST["Autorizējies"])){
+<?php  if(isset($_POST["Autorizējies"])){
 								require "connect_db.php";
 								session_start();
 		
@@ -8,7 +8,6 @@
 								$sqlVaicajums = "SELECT * FROM lietotaji WHERE Epasts = '$Epasts'";
 
 								$rezultats = mysqli_query($savienojums, $sqlVaicajums);
-
 								if(mysqli_num_rows($rezultats) == 1){
 									while($row = mysqli_fetch_array($rezultats)){
 										if(password_verify($Parole, $row["Parole"])){

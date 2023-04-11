@@ -1,12 +1,13 @@
 <?php
-$page = "aktualitates";
 require("header.php");
 require("login.php");
+require "connect_db.php";
+$nosaukums = $_POST['apskatit'];
 ?>
     <section id="pieteikties">
         <h1 id="pieteiktiesH">
-            <button class="btnB"><a href="vakances.html" class="back"><img src="images/Atpakaļ.png" alt=""></a></button>
-            Piesakies vakancei par <span>SIA "Rimi" IT speciālistu!</span></h1>
+            <button class="btnB"><a href="vakances.php" class="back"><img src="images/Atpakal.png" alt=""></a></button>
+            Piesakies vakancei par <span> <?php echo $nosaukums?></span></h1>
         <div class="box-container">
         <div class="box">
             <form action="" method="">
@@ -18,11 +19,7 @@ require("login.php");
                 <br>
                 <input type="date" placeholder="Dzimšanas dati" name="Dzimšanas dati" class="liel" title="Dzimšanas dati" required>
                 <br>
-                <input type="text" placeholder="Izglītība" name="izglitiba" class="liel" title="Izglitiba" required>
-                <br>
-                <input type="text" placeholder="Darba pieredze" name="Darba pieredze" class="liel" title="Darba pieredze" required>
-                <br>
-                <input type="text" placeholder="Digitālās prasmes" name="Digitālās prasmes" class="liel" title="Digitālās prasmes" required>
+                <input type="file" name="CV" required>
                 <br>
                 <textarea maxlength="408" placeholder="Komentāri."></textarea>
                 <br>
