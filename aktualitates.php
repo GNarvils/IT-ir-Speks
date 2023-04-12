@@ -8,7 +8,7 @@ require("login.php");
             Apskati jaunākos IT notikumus.</h1>
             <?php
             if(isset($_SESSION["Epasts"])){
-            echo "<button class='pievienot'>Pievienot aktualitāti</button>";
+            echo "<form action = 'pievienota.php' method='post'><button class='pievienot'>Pievienot aktualitāti</button></form>";
             }
             ?>
             <div class="container">
@@ -24,7 +24,7 @@ require("login.php");
                      <h2>{$ieraksts['Virsraksts']}</h2>
                      <p class='apr'>{$ieraksts['Apraksts']}</p>";
                      if(!isset($_SESSION["Epasts"])){
-                     echo "<button>Lasi vairāk</button>";
+                     echo "<form action='aktualitate.php' method='post'><button name='Lasit' type='submit' value={$ieraksts['Aktualitates_ID']}>Lasi vairāk</button></form>";
                      }
                      if(isset($_SESSION["Epasts"])){
                         echo " <div class='akt'>

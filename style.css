@@ -275,9 +275,9 @@ header .auto img{
 
 /*Vakances*/
 #vakancesH{
-    font-size: 5em;
+    font-size: 4.5rem;
     line-height: 1.9rem;
-    padding: 12rem 1rem 7rem 1rem;
+    padding: 12rem 1rem 6rem 1rem;
     color: var(--darkgreen);
     text-align: center;
 }
@@ -288,16 +288,17 @@ header .auto img{
 }
 table{
     display:inline-block;
-    overflow: scroll;
+    width: 80%;
+    overflow-x: scroll;
     font-size: 2rem;
-    width: 90%;
     margin-left: auto;
     margin-right: auto;
     box-shadow: var(--box-shadow);
 }
 th, td{
     text-align: center;
-    height: 50px;
+    width: 100%;
+    height: 100%;
     padding: 0.2rem 1.2rem;
     border: 1px solid rgb(183, 249, 180);
     word-wrap:break-word;
@@ -308,7 +309,7 @@ th, td{
     max-height: 40%;
 }
 th{
-
+    position: sticky;
     font-weight: bold;
     color: var(--darkgreen);
     font-size: 2.3rem;
@@ -423,7 +424,7 @@ th{
 }
 
 #aktualitatesH1{
-    font-size: 5em;
+    font-size: 4.5em;
     line-height: 1.9rem;
     padding: 5rem 1rem 7rem 1rem;
     color: var(--darkgreen);
@@ -599,4 +600,109 @@ z-index: 2;
 .mazs{
     max-width: 50px;
     margin: 0.1rem 1rem;
+}
+
+.inv{
+    max-width: 0.01rem;
+    max-height: 0.01rem;
+}
+
+.buttonl{
+    cursor: pointer;
+    width: 200px;
+    height: 50px; 
+    font-size: 2.3rem;
+    box-shadow: var(--box-shadow);
+    text-align: center;
+    border-radius: 1rem;
+    background-color:rgb(216, 216, 216);
+}
+
+#pieteikties .box-container .box button{
+    border: 1px solid rgb(183, 249, 180);
+    width: 40%;
+    border-radius: 1rem;
+    height: 4.3rem;
+    margin: 0.5rem 0.5rem;
+    text-align: center;
+}
+
+
+#pieteikties .box-container .box button:hover{
+    background-color:rgb(183, 249, 180);
+    cursor: pointer;
+     
+}
+#pieteikties .box-container .box p{
+    font-size: 1.4rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+
+#apraksts{
+    text-align: center;
+    font-size: 2.5rem;
+    padding: 0.5rem;
+}
+.headimg{
+    width:1600px;
+    height:100px;
+    margin: 0 auto;
+    position: relative;
+    overflow:hidden;
+}
+
+#raksts{
+    width: 1600px;
+    margin-top: -250px;
+    position: absolute;
+    opacity: 0.3;
+}
+
+#aktualitate p {
+    text-align: justify;
+    width: 90%;
+    margin: 0 auto;
+    font-size: 2rem;
+    padding: 2rem;
+}
+.vakancesP{
+    width: 40%;
+}
+
+.vakancesP button{
+    cursor: pointer;
+    width: 50px;
+    height: 50px; 
+    font-size: 2.3rem;
+    box-shadow: var(--box-shadow);
+    text-align: center;
+    border-radius: 1rem;
+    background-color:rgb(216, 216, 216);
+}
+
+.vakancesP button:hover{
+    background-color:rgb(183, 249, 180);
+  }
+
+  #pieteikums p{
+    text-align: left;
+    width: 60%;
+    margin: 0 auto;
+    font-size: 2rem;
+    padding: 0.5rem 2rem;
+}
+
+#pieteikums input{
+    text-align: left;
+    width: 43%;
+    margin: 0 auto;
+    font-size: 2rem;
+}
+
+#pieteikums input[type=radio] {
+    border: 0px;
+    width: 43%;
+    height: 2rem;
 }

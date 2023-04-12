@@ -8,6 +8,9 @@ require("login.php");
                <?php if(isset($_SESSION["Epasts"])){
             echo "<form action = 'pievienotv.php' method='post'><button class='pievienot'>Pievienot vakanci</button></form>";
             } ?>
+                          <?php if(isset($_SESSION["Epasts"])){
+            echo "<form action = 'pieteikumi.php' method='post'><button class='pievienot'>Pieteikumi</button></form>";
+            } ?>
             <table class="vakancesT">
             <tr>
                 <th>Logo</th>
@@ -48,12 +51,16 @@ require("login.php");
                     <td class='apr'>{$ieraksts['Apraksts']}</td>";
                     if(!isset($_SESSION["Epasts"])){
                     echo "<form action='pieteikties.php' method='post'>
-                    <td><button type='submit' name='apskatit' value={$ieraksts['Nosaukums']}><i class='fa fa-sign-in'></i></button></td>
+                    <td><button type='submit' name='apskatit' value={$ieraksts['Vakances_ID']}><i class='fa fa-sign-in'></i></button></td>
                     </form>
                     ";
                     } if(isset($_SESSION["Epasts"])){ 
                     echo "
-                    <td><button><i class='fa fa-edit'></i></button></td>
+                    <td>
+                    <form action='editv.php' method='post'>
+                    <button type='submit' class='mazs' name='editv' value={$ieraksts['Vakances_ID']}><i class='fa fa-edit'></i></button>
+                    </form>
+                    </td>
                     <td> <form action='deletev.php' method='post'>
                     <button type='submit' name='dzestv' class='mazs' value={$ieraksts['Vakances_ID']}><i class='fa fa-trash'></i></button>
                     </form> </td>

@@ -4,7 +4,6 @@
         session_start();
         if(isset($_SESSION["Epasts"])){
                 ?>
- <section id="aktualitate">
         <h1 id="aktualitatesH1">
             <button class="btnB"><a href="aktualitates.php" class="back"><img src="images/Atpakal.png" alt=""></a></button>
             Rediģē aktualitāti.</h1>
@@ -31,19 +30,23 @@
                     $atlasa_Aktualitati = mysqli_query($savienojums, $atlasit_aktualitati_SQL);
                     while($ieraksts = mysqli_fetch_assoc($atlasa_Aktualitati)){
                         echo "
-                            <table>
+                        <section id='pieteikties'>
+                        <div class='box-container'>
+                        <div class='box'>
                             <form method='POST'>
-                            <tr><td>Bilde:</td>
-                            <td><input type='text' name='bildeR' value='{$ieraksts['Bilde']}' class = 'liel' required></td></tr>
-                            <tr><td>Virsraksts:</td>
-                            <td> <input type='text' placeholder='Ievadi aktualitātes virsrakstu*' name='virsrakstsR' value='{$ieraksts['Virsraksts']}' required></td></tr>        
-                            <tr><td>Apraksts:</td>
-                            <td><input type='text' placeholder='Ievadi aktualitātes aprakstu*' name='aprakstsR' title='Attēls' value='{$ieraksts['Apraksts']}' maxlength='255' required></td></tr>
-                            <tr><td>Raksts:</td>
-                            <td> <textarea type='text' placeholder='Ievadi rakstu*' name='rakstsR' required>{$ieraksts['Raksts']}</textarea></td></tr>        
-                            <td colspan='2'><button type='submit' name='redigetA' value='{$ieraksts['Aktualitates_ID']}'>Rediget</button></td>
+                            <input type='text' name='bildeR' value='{$ieraksts['Bilde']}' class = 'liel' required>
+                            <br>
+                           <input type='text' placeholder='Ievadi aktualitātes virsrakstu*' name='virsrakstsR' value='{$ieraksts['Virsraksts']}' required>       
+                            <br>
+                            <input type='text' placeholder='Ievadi aktualitātes aprakstu*' name='aprakstsR' title='Attēls' value='{$ieraksts['Apraksts']}' maxlength='255' required>
+                            <br>
+                            <textarea type='text' placeholder='Ievadi rakstu*' name='rakstsR' required>{$ieraksts['Raksts']}</textarea>    
+                            <br>   
+                            <button type='submit' name='redigetA' value='{$ieraksts['Aktualitates_ID']}'>Rediget</button>
                             </form>
-                            </table>
+                            </div>
+                            </div>
+                            </section>
                         ";
                     }
 
@@ -51,10 +54,6 @@
                     echo "<div class='kluda'>Kaut kas nogāja greizi! Atgriezies iepriekšējā lapā un mēģini velreiz!</div>";
                     header("Refresh:2; url=aktualitates.php");
                 }
-            ?>
-
-</section>
-<?php 
 }else{
             echo "<div class='kluda'>
             <br>
