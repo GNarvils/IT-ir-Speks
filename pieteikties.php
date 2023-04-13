@@ -1,7 +1,8 @@
 <?php
 require("header.php");
 require("login.php");
-require "connect_db.php";
+if($_SERVER['REQUEST_METHOD'] == 'POST'){
+    require "connect_db.php";
 if(isset($_POST["Piesakies"])){
     $vards = $_POST["vards"];
     $uzvards = $_POST["uzvards"];
@@ -15,13 +16,13 @@ if(isset($_POST["Piesakies"])){
     $statuss = "6";
     $VakID = $_POST["vak"];
     if(!empty($vards) && !empty($uzvards) && !empty($talrunis) && !empty($epasts) && !empty($dzimdati) && !empty($izglitiba) && !empty($pieredze) && !empty($prasmes) && !empty($komentari)){
-        $pievienot_pieteikumu_SQL = "INSERT INTO pieteikties VALUES(Vards, Uzvards, Epasts, Talrunis, DzimDati, Izglitiba, DarbaPieredze, DigPrasmes, Komentari, ID_Vakances, ID_Statuss) VALUES ('$vards', '$uzvards', '$talrunis', '$epasts', '$dzimdati', '$izglitiba', '$pieredze', '$prasmes', '$komentari', '$VakID', '$statuss')";
+        $pievienot_pieteikumu_SQL = "INSERT INTO pieteikties (Vards, Uzvards, Epasts, Talrunis, DzimDati, Izglitiba, DarbPieredze, DigPrasmes, Komentari, ID_Vakances, ID_Statuss) VALUES ('$vards', '$uzvards', '$epasts', '$talrunis', '$dzimdati', '$izglitiba', '$pieredze', '$prasmes', '$komentari', '$VakID', '$statuss')";
 
         if(mysqli_query($savienojums, $pievienot_pieteikumu_SQL)){
             header("Refresh: 0; url=vakances.php");
         }else{
             echo "<br><div class='kluda'>Pieteikšanās nav izdevusies! Mēģiniet vēlreiz!</div>";
-            header("Refresh: 10; url=vakances.php");
+            header("Refresh: 2; url=vakances.php");
         }
     }else{
         echo "<div class='kluda'>Pieteikšanās nav izdevusies! Kāds no ievades laukiem aizpildīts NEKOREKTI!</div>";
@@ -33,6 +34,7 @@ $atlasaID = mysqli_query($savienojums, $idVaicajums);
 while($row = mysqli_fetch_assoc($atlasaID)){
     $nosaukums = $row["Nosaukums"];
     $profesija = $row["Profesija"];
+}
 }
 }
 ?>
@@ -59,7 +61,7 @@ while($row = mysqli_fetch_assoc($atlasaID)){
                 <br>
                 <textarea maxlength="408" name="koment" placeholder="Komentāri."></textarea>
                 <br>
-                <input type="text"  name='vak' <?php echo "value = $ID";?> readonly>
+                <input type="text" class='inv' name='vak' <?php echo "value = $ID";?> readonly>
                 <br>
                 <input type="submit" name="Piesakies" value = "Piesakies" title="Piesakies" class="buttonl">
             </form>

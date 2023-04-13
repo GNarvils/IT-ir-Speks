@@ -23,11 +23,6 @@ session_start();
           <a href='index.php'>Sākumlapa</a>
             <a href='vakances.php'>Vakances</a>
             <a href='aktualitates.php'>Aktualitātes</a>
-            <?php if(isset($_SESSION["Epasts"])){
-                if(isset($_SESSION["Admin"])){
-            echo "<a href='darbinieki.php'>Darbineiki</a>";
-                }
-        }?>
         </nav>
         <div class="auto">
            <?php if(isset($_SESSION["Epasts"])){

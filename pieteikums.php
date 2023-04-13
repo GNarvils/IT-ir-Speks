@@ -44,12 +44,6 @@ while($ieraksts = mysqli_fetch_assoc($atlasaPieteikumu)){
 }?>
 
 <?php 
-//<p>Vakance: $nosaukums</p> 
-    //$vakancesVaicajums = "SELECT * FROM vakance WHERE Vakances_ID = '{$ieraksts['ID_Vakances']}' limit 1";
-    //$atlasaVakanci = mysqli_query($savienojums, $pieteikumuVaicajums);
-    //while($row = mysqli_fetch_assoc($atlasaVakanci)){
-      //  $nosaukums = $row["Nosaukums"];
-    //}
 require("footer.php");?>
 
 
