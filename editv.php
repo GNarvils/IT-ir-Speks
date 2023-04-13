@@ -3,7 +3,7 @@
         require "header.php";
         session_start();
         if(isset($_SESSION["Epasts"])){
-            ?><h1 id="vakancesH">
+            ?><h1 id="vakancesE">
             <button class="btnB"><a href="vakances.php" class="back"><img src="images/Atpakal.png" alt=""></a></button>
             Rediģē vakanci.</h1>
             <?php
@@ -50,7 +50,7 @@
                             <br>
                             <textarea type='text' placeholder='Ievadi aprakstu*' name='aprakstsR' required>{$ieraksts['Apraksts']}</textarea>
                             <br>   
-                            <p>Aktīva</p><input type='radio' name='Statuss' value='1' class='status'>
+                            <p>Aktīva</p><input type='radio' name='Statuss' value='1' class='status' checked='checked'>
                             <p>Neaktīva</p><input type='radio' name='Statuss' value='2' class='status'>
                             <br>
                             <button type='submit' name='redigetV' value='{$ieraksts['Vakances_ID']}'>Rediget</button>

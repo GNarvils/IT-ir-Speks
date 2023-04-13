@@ -33,7 +33,7 @@ while($ieraksts = mysqli_fetch_assoc($atlasaPieteikumu)){
     <p>Vakances numurs: {$ieraksts['ID_Vakances']}</p> 
     <p>Statuss:</p>
     <form method='POST'>
-    <p>Saņemts</p><input type='radio' name='Statuss' value='6' class='status'>
+    <p>Saņemts</p><input type='radio' name='Statuss' value='6' class='status' checked='checked'>
     <p>Apskatīts</p><input type='radio' name='Statuss' value='5' class='status'> 
     <p>Atraidīts</p><input type='radio' name='Statuss' value='4' class='status'>
     <p>Pieņemts</p><input type='radio' name='Statuss' value='3' class='status'>

@@ -281,6 +281,13 @@ header .auto img{
     color: var(--darkgreen);
     text-align: center;
 }
+#vakancesE{
+    font-size: 4.5rem;
+    line-height: 1.9rem;
+    padding: 4rem 1rem 5rem 1rem;
+    color: var(--darkgreen);
+    text-align: center;
+}
 .akt{
     display: flex;
     justify-content: center;
@@ -304,8 +311,8 @@ th, td{
     word-wrap:break-word;
     border-style: solid;  
 }
-.apr{
-    max-width: 830px;
+table .apr{
+    min-width: 500px;
     max-height: 40%;
 }
 th{
@@ -383,7 +390,7 @@ th{
     text-align: center;
 }
 
-#pieteikties .box-container .box .liel{
+#pieteikties .box-container .box .submit{
     border: 1px solid rgb(183, 249, 180);
     width: 40%;
     border-radius: 1rem;
@@ -393,7 +400,7 @@ th{
 }
 
 
-#pieteikties .box-container .box .submit:hover{
+#pieteikties .box-container .box .liel:hover{
     background-color:rgb(183, 249, 180);
     cursor: pointer;
      
@@ -412,6 +419,13 @@ th{
     font-size: 1.5rem;
     padding: 0.5rem;
 }
+
+#pieteikties .box-container .box [type=radio]{
+    border: 0px;
+    width: 43%;
+    height: 2rem;
+}
+
 
 
 /*Aktualitātes*/
@@ -540,6 +554,25 @@ th{
     font-weight: bold;
     background: #a14141;
 }
+.kluda2{
+    font-size: 4rem;
+    text-align: center;
+    padding-top: 15rem;
+    padding-bottom: 1rem;
+    color: #eee;
+    font-weight: bold;
+    background: #a14141;
+}
+
+.zals{
+    font-size: 4rem;
+    text-align: center;
+    padding-top: 15rem;
+    padding-bottom: 1rem;
+    color: #eee;
+    font-weight: bold;
+    background: #1dbb04;
+}
 .autorizeties{
     display: none;
     justify-content: center;
@@ -618,6 +651,17 @@ z-index: 2;
     background-color:rgb(216, 216, 216);
 }
 
+.buttonl:hover{
+    cursor: pointer;
+    width: 200px;
+    height: 50px; 
+    font-size: 2.3rem;
+    box-shadow: var(--box-shadow);
+    text-align: center;
+    border-radius: 1rem;
+    background-color:rgb(183, 249, 180);
+}
+
 #pieteikties .box-container .box button{
     border: 1px solid rgb(183, 249, 180);
     width: 40%;
@@ -646,7 +690,7 @@ z-index: 2;
     padding: 0.5rem;
 }
 .headimg{
-    width:1600px;
+    width:1400px;
     height:100px;
     margin: 0 auto;
     position: relative;
@@ -668,7 +712,7 @@ z-index: 2;
     padding: 2rem;
 }
 .vakancesP{
-    width: 40%;
+    width: 50%;
 }
 
 .vakancesP button{
@@ -706,3 +750,30 @@ z-index: 2;
     width: 43%;
     height: 2rem;
 }
+
+.darbinieki{
+    width: 90%;
+}
+
+.darbinieki button{
+    cursor: pointer;
+    width: 50px;
+    height: 50px; 
+    font-size: 2.3rem;
+    box-shadow: var(--box-shadow);
+    text-align: center;
+    border-radius: 1rem;
+    background-color:rgb(216, 216, 216);
+}
+
+.darbinieki button:hover{
+    background-color:rgb(183, 249, 180);
+  }
+#Parole{
+  font-size: 4.5rem;
+  line-height: 1.9rem;
+  padding: 30rem 1rem 6rem 1rem;
+  color: var(--darkgreen);
+  text-align: center;
+}
+

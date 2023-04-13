@@ -10,6 +10,7 @@
 								$rezultats = mysqli_query($savienojums, $sqlVaicajums);
 								if(mysqli_num_rows($rezultats) == 1){
 									while($row = mysqli_fetch_array($rezultats)){
+										if($row["Statuss"] == "Aktīvs"){
 										if(password_verify($Parole, $row["Parole"])){
 											$_SESSION["Epasts"] = $Epasts;
 											header("location:index.php");
@@ -19,7 +20,13 @@
 											</div>";
 											header("Refresh:3");
 										}
+									}else{
+										echo "<div class='kluda'>
+										Konts nav aktīvs! Sazinieties ar administratoru.
+										</div>";
+										header("Refresh:3");
 									}
+								}
 								}else{
 									echo "<div class='kluda'>
 									Nepareizs e-pasts vai parole!
@@ -39,6 +46,6 @@
         <br>
         <input type="submit" value="Autorizējies" name="Autorizējies" title="Autorizējies" class="Abtn">
         <br>
-        <a href="#"> Aizmirsi paroli!</a>
+        <a href="parolem.php"> Aizmirsi paroli!</a>
     </form>
      </div>

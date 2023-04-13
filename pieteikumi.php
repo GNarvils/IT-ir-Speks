@@ -13,6 +13,7 @@ session_start();
                 <th>E-pasts</th>
                 <th>Vakances numurs</th>
                 <th>Apskati</th>
+                <th>Dzēst</th>
             </tr>
             <?php
                    require "connect_db.php";
@@ -28,6 +29,9 @@ session_start();
                     <td>{$ieraksts['ID_Vakances']}</td>
                     <form action='pieteikums.php' method='post'>
                     <td><button type='submit' name='apskatit' value={$ieraksts['Pieteikties_ID']}><i class='fa fa-sign-in'></i></button></td>
+                    </form>
+                    <form action='dzestp.php' method='post'>
+                    <td><button type='submit' name='dzest' value={$ieraksts['Pieteikties_ID']}><i class='fa fa-trash'></i></button></td>
                     </form>
                     ";
                    }
