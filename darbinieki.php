@@ -10,7 +10,7 @@ session_start();
             while($row = mysqli_fetch_assoc($atlasaLietotaja)){
                 $Admin = $row["Administrators"];
             }
-            if($Admin = 1){ ?>
+            if($Admin == 1){ ?>
                <h1 id="vakancesH">
                 <button class="btnB"><a href="index.php" class="back"><img src="images/Atpakal.png" alt=""></a></button>
                 Apskati visus kontus.</h1>
